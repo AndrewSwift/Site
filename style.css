@@ -28,6 +28,7 @@
 /* -------------------------------------------------- fixed elements */
 
 	#placement{
+		/* background-color:rgba(0, 0, 70, 0.3); */
 		position:fixed;
 	}
 
@@ -56,11 +57,11 @@
 	}
 
 	#ombreg{
-		left:20%;
+		left:23.7%;
 	}
 
 	#ombred{
-		left:90%;
+		left:94.1%;
 	}
 
 	#ombreh,#ombreb{
@@ -68,19 +69,22 @@
 	}
 
 	#ombreh{
-		top:48%;
+		top:44.3%;
 		}
 
 	#ombreb{
-		top:90%;
+		top:77.6%
 	}
 
 /* -------------------------------------------------- logo */
-	#logo,#menu,#contact,
 
 	#logo{
 		cursor:pointer;
-		width:100%;
+		position:absolute;
+background-color:blue;
+		top:30.5%;
+		left:12.3%;
+		width:25.5%;
 	}
 
 /* -------------------------------------------------- basic HTML */
