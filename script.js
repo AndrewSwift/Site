@@ -33,13 +33,20 @@
 	// draw black bars top & bottom if page too narrow
 	cinema(offset_y, ref_height, scale);
 
+	stylestr = 	'left:'		+ offset_x						+';'+
+				'top:'		+ offset_y						+';'+
+				'width:'	+ ref_height * aspect * scale	+';'+
+				'height:'	+ ref_height * scale;
+
+	$('placement').attr('style', stylestr);
+
+
 	// draw main scrolling content
 	content(offset_x + (content_x * scale), ref_height * scale);
 
-throw new Error('script.js');
-
-	fontsize = Math.round(100*conversion);
-	$('body').css('font','normal '+fontsize+'px/'+fontsize+'px Abel');
+throw new Error('script.js: '+ stylestr);
+	fontsize = math.round(100*conversion);
+	$('body').css('font','normal '+fontsize+'px/'+fontsize+'px abel');
 
 	dimlogo   = ['#logo',  'width' ,350,'right',1500-380,'top',374];
 
