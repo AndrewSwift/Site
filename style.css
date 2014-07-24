@@ -52,6 +52,8 @@
 		height:100%;
 	}
 
+/* -------------------------------------------------- main square scrolling content */
+
 	#scroller{
 		height:100%;
 		background-color:#fff;
@@ -60,10 +62,18 @@
 
 	#scroller img{
 		cursor:pointer;
-		width:10px;
+		width:92%;
 		display:block;
 		background-color:#fff;
+		padding:0% 4% 4% 4%;
 	}
+
+	#scroller #accueil{
+		width:100%;
+		padding:0;
+	}
+
+/* -------------------------------------------------- cinema masks */
 
 	#masque-haut,#masque-bas{
 		background-color:#000;

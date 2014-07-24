@@ -33,7 +33,8 @@
 	// draw black bars top & bottom if page too narrow
 	cinema(offset_y, ref_height, scale);
 
-	content(offset_x + content_x*scale, ref_height * scale);
+	// draw main scrolling content
+	content(offset_x + (content_x * scale), ref_height * scale);
 
 throw new Error('script.js');
 

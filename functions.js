@@ -110,8 +110,6 @@
 
 	function content(offset, wid){
 			$('#scroller').css({left:offset, width:wid});
-
-throw new Error(offset+':'+wid);
 	}
 
 //------------------------------------------------------- fin
