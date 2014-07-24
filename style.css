@@ -30,9 +30,31 @@
 
 /* -------------------------------------------------- fixed elements */
 
+	#placement{
+		position:fixed;
+		border:1px solid #666;
+		padding:-1px;
+	}
+
+/* -------------------------------------------------- fixed elements */
+
 	#logo,#menu,#contact,
 	#ombreg,#ombred,#ombreh,#ombreb{
-		position:fixed;
+		position:relative;
+	}
+
+	#ombreg, #ombred{
+		top:32%;
+		height:67%;
+		border:1px solid red;
+	}
+
+	#ombreg{
+		left:20%;
+	}
+
+	#ombred{
+		left:90%;
 	}
 
 /* -------------------------------------------------- logo */
@@ -56,7 +78,6 @@
 
 	#scroller{
 		width:300;
-height:100%;
 		background-color:#fff;
 		position:relative;
 	}

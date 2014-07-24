@@ -33,18 +33,19 @@
 	// draw black bars top & bottom if page too narrow
 	cinema(offset_y, ref_height, scale);
 
-	stylestr = 	'left:'		+ offset_x						+';'+
-				'top:'		+ offset_y						+';'+
-				'width:'	+ ref_height * aspect * scale	+';'+
-				'height:'	+ ref_height * scale;
+	stylestr = 	'left:'		+ offset_x						+'px;'+
+				'top:'		+ offset_y						+'px;'+
+				'width:'	+ ref_height * aspect * scale	+'px;'+
+				'height:'	+ ref_height * scale			+'px;';
 
-	$('placement').attr('style', stylestr);
+	// place main box with all non-scrolling content
+	$('#placement').attr('style', stylestr);
 
+throw new Error('script.js: '+ stylestr);
 
 	// draw main scrolling content
 	content(offset_x + (content_x * scale), ref_height * scale);
 
-throw new Error('script.js: '+ stylestr);
 	fontsize = math.round(100*conversion);
 	$('body').css('font','normal '+fontsize+'px/'+fontsize+'px abel');
 
