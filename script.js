@@ -30,18 +30,26 @@
 
 //------------------------------------------------------- startup
 
+	// fix background size
+	stylestr = 	'left:0'												+'px;'+
+				'top:'		+ offset_y									+'px;'+
+				'width:'	+ win_w										+'px;'+
+				'height:'	+ Math.round(ref_height * scale)			+'px;';
+
+	$('#background').attr('style', stylestr);
+	
 	// draw black bars top & bottom if page too narrow
 	cinema(offset_y, ref_height, scale);
 
-	stylestr = 	'left:'		+ offset_x						+'px;'+
-				'top:'		+ offset_y						+'px;'+
-				'width:'	+ ref_height * aspect * scale	+'px;'+
-				'height:'	+ ref_height * scale			+'px;';
-
 	// place main box with all non-scrolling content
+	stylestr = 	'left:'		+ offset_x									+'px;'+
+				'top:'		+ offset_y									+'px;'+
+				'width:'	+ Math.round(ref_height * aspect * scale)	+'px;'+
+				'height:'	+ Math.round(ref_height * scale)			+'px;';
+
 	$('#placement').attr('style', stylestr);
 
-throw new Error('script.js: '+ stylestr);
+throw new Error('script.js: '+Math.round(ref_height * scale));
 
 	// draw main scrolling content
 	content(offset_x + (content_x * scale), ref_height * scale);
