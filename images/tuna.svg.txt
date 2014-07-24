@@ -1,0 +1,5 @@
+<h1>Affiche pour Small Axe Productions</h1>
+
+<p>Ceci sera le texte du corps. Deux phrases, pas
+<br>beaucoup plus. Peut-être moins. Ou peut-être bien<br>
+plus, on verra bien, le jour venu. Un dernier mot.

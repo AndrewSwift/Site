@@ -1,0 +1,58 @@
+<!doctype html><html><head>
+
+    <script src="jquery-2.1.1.min.js"></script>
+    <meta charset="utf-8" />
+
+    <title>Ozaké Design Toulouse</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!-- http://davidwalsh.name/zoom-mobile-browsers -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head><body>
+
+	<div id=background></div><!-- because ios doesn't respect fixed html/body background -->
+	<div id=haut></div><!-- create initial black "cinema" bar above page -->
+
+	<img id=ombreg src=images/ombre-gauche.png>
+	<img id=ombred src=images/ombre-droite.png>
+	<img id=ombreh src=images/ombre-haute.png>
+	<img id=ombreb src=images/ombre-basse.png>
+
+	<img id=logo src=images/ozake.svg>
+
+	<div id=menu>
+		<a href=x.html>graphisme</a>
+		<a href=x.html>dévéloppement</a>
+		<a href=x.html>traduction</a>
+		<a href=x.html>clientèle</a>
+		<a href=x.html>à propos</a>
+		<a href=x.html>prix</a>
+	</div>
+
+	<a id=contact href=contact.html>06 18 26 09 61 / EMAIL</a>
+
+	<div id=scroller>
+		<img id=accueil src=images/accueil.jpg>
+		<img src=images/labmi.svg onmousedown="msdown(this,70,150,200);">
+		<img src=images/tuna.svg onmousedown="msdown(this,3,150,200);">
+		<img src=images/epicenter.svg onmousedown="msdown(this,30,150,200);">
+		<img src=images/camille.svg onmousedown="msdown(this,10,150,200);">
+		<img src=images/factotum.svg onmousedown="msdown(this,70,150,200);">
+		<img src=images/love.svg onmousedown="msdown(this,3,150,200);">
+		<img src=images/mynka.svg onmousedown="msdown(this,0,150,200);">
+		<img src=images/annabelle.svg onmousedown="msdown(this,3,150,200);">
+		<img src=images/lemon.svg onmousedown="msdown(this,70,150,200);">
+	</div>
+
+	<div id=masque-haut></div><!-- cover when scrolling -->
+	<div id=masque-bas></div><!-- cover when scrolling -->
+	<div id=zoom onmousedown="msup(this);"><!-- show info about a portfolio item -->
+		<img id=zoomimg>
+		<div id=zoomtxt></div>
+	</div>
+
+	<script src="javascript.js"></script>
+
+<!-- help me -->
+</body></html>
