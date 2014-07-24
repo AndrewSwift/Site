@@ -13,7 +13,6 @@
 	}
 
 	body{
-		font-size:100%;
 		-webkit-text-size-adjust: none; /* http://css-tricks.com/prevent-iphone-text-enlargement/ */
 	}
 
@@ -28,7 +27,6 @@
 /* -------------------------------------------------- fixed elements */
 
 	#placement{
-		/* background-color:rgba(0, 0, 70, 0.3); */
 		position:fixed;
 	}
 
@@ -84,31 +82,6 @@
 		top:12.8%;
 		left:2.0%;
 		width:23.5%;
-	}
-
-/* -------------------------------------------------- menu */
-
-	#menu, #contact{
-		font:normal 1.0em/1.5em Abel, sans-serif;
-		text-align:right;
-	}
-
-	#menu a:link,#menu a:visited,
-	#contact a:link,#contact a:visited{
-		text-transform:uppercase;
-		text-decoration:none;
-		display:block;
-		color:#000;
-		background:none;
-		margin:1px;
-		position:absolute;
-		top:12.8%;
-		left:2.0%;
-	}
-
-	#menu a:hover, #menu a:active,
-	#contact a:hover, #contact a:active{
-		background-color:rgba(0, 0, 0, 0.1);
 	}
 
 /* -------------------------------------------------- basic HTML */
@@ -190,6 +163,29 @@
 		padding:0;
 		margin:0;
 		font:normal 1.1em/1.5em Helvetica,sans-serif;
+	}
+
+/* -------------------------------------------------- menu */
+
+	#menu{
+		font:normal 1.0rem/1.5rem Abel, sans-serif;
+		text-align:right;
+		position:absolute;
+		top:51.8%;
+		left:13.7%;
+	}
+
+	#menu a:link,#menu a:visited{
+		text-transform:uppercase;
+		text-decoration:none;
+		padding:0 0.2em;
+		display:block;
+		color:#000;
+		background:none;
+	}
+
+	#menu a:hover, #menu a:active{
+		background-color:rgba(0, 0, 0, 0.1);
 	}
 
 /* -------------------------------------------------- fin */

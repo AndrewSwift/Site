@@ -28,6 +28,10 @@
 		offset_y = Math.round((win_h - (scale * ref_height)) / 2);
 	}
 
+//------------------------------------------------------- fix font size
+
+	$('body').css('font-size',scale + 'em');
+
 //------------------------------------------------------- startup
 
 	// fix background size
