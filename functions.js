@@ -1,27 +1,5 @@
 //------------------------------------------------------- functions
 
-	function dessiner(w,h){
-	// envoie le format de chaque élément de la page
-	// 4+37+100+9 = 150%
-
-			// ratio pour convertir de pourcent en pixels
-			ratio = h/100;
-
-			// montant de supp' de chaque côté de notre page
-			extra = Math.round((w-(h*1.5))/2);
-
-			// positionnement des images de portfolio
-			marge = Math.round((4+37)*ratio);
-
-			$('#scroller').css({width:h, left:extra+marge});
-
-			// marge blanche autour des images de portfolio
-			marge = Math.round(h*.05);
-			$('#scroller img').css({width:h-marge,padding:marge/2});
-
-			$('#accueil').css({width:h,padding:0});
-	}
-
 	function haschanged(){
 		if (realw != $(window).width() || realh != $(window).height()){
 			realw = $(window).width();
@@ -126,6 +104,14 @@
 			$('#masque-haut').css('height',0);
 			$('#masque-bas' ).css('height',0);
 		}
+	}
+
+//------------------------------------------------------- content
+
+	function content(offset, wid){
+			$('#scroller').css({left:offset, width:wid});
+
+throw new Error(offset+':'+wid);
 	}
 
 //------------------------------------------------------- fin

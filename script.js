@@ -3,6 +3,8 @@
 	var aspect = 3/2;		// width and height of main page
 	var ref_height = 1000;	// reference height of design
 
+	var content_x = 410;	// left edge of main content box
+
 //------------------------------------------------------- global variables
 // need x offset, y offset and scale
 
@@ -29,9 +31,9 @@
 //------------------------------------------------------- startup
 
 	// draw black bars top & bottom if page too narrow
-	cinema(offset_y,ref_height,scale);
+	cinema(offset_y, ref_height, scale);
 
-	dessiner(realw,workh);
+	content(offset_x + content_x*scale, ref_height * scale);
 
 throw new Error('script.js');
 
