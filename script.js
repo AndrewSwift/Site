@@ -1,6 +1,7 @@
 //------------------------------------------------------- config
 
-	ratio = 3/2; // width and height of main page
+	aspect = 3/2;		// width and height of main page
+	ref_height = 1000;	// reference height of design
 
 //------------------------------------------------------- global variables
 // need x offset, y offset and scale
@@ -8,18 +9,20 @@
 	win_w = $(window).width();
 	win_h = $(window).height();
 
-	if (win_w/win_h > ratio){ // screen is too wide
-		workw = Math.round(realh*ratio);
-		workh = realh;
-		extrax = Math.round((realw-workw)/2);
-		extray = 0;
+	if (win_w/win_h > aspect){ // screen is too wide
+		offset_y= 0;
+		scale = win_h / ref_height;
+
+		offset_x = Math.round((win_w - (scale * aspect * ref_height)) / 2);
 	}
 	else{ // screen is too narrow
-		workw = realw;
-		workh = Math.round(workw/1.5);
-		extray = Math.round((realh-workh)/2);
-		extrax = 0;
+		offset_x = 0;
+		scale = win_w / (ref_height * aspect);
+
+		offset_y = Math.round((win_h - (scale * ref_height)) / 2);
 	}
+
+throw new Error("offset_y="+offset_y);
 
 //------------------------------------------------------- old global variables
 
@@ -32,8 +35,8 @@
 	// if the screen is too narrow, we use an artificial height
 	// and put black bars above and below
 
-	if (realw/realh>ratio){ // screen is too wide
-		workw = Math.round(realh*ratio);
+	if (realw/realh>aspect){ // screen is too wide
+		workw = Math.round(realh*aspect);
 		workh = realh;
 		extrax = Math.round((realw-workw)/2);
 		extray = 0;
