@@ -31,7 +31,7 @@
 //------------------------------------------------------- fix font size
 
 	//$('body').css('font-size',scale*2 + 'em');
-	$('body').css('font-size','0.936em');
+	$('body').css('font-size',scale*1.9+'em');
 // alert(scale*2 + 'em'); // 0.672em
 // alert(scale*1 + 'em'); // 0.336em
 
