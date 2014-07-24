@@ -81,10 +81,34 @@
 	#logo{
 		cursor:pointer;
 		position:absolute;
-background-color:blue;
-		top:30.5%;
-		left:12.3%;
-		width:25.5%;
+		top:12.8%;
+		left:2.0%;
+		width:23.5%;
+	}
+
+/* -------------------------------------------------- menu */
+
+	#menu, #contact{
+		font:normal 1.0em/1.5em Abel, sans-serif;
+		text-align:right;
+	}
+
+	#menu a:link,#menu a:visited,
+	#contact a:link,#contact a:visited{
+		text-transform:uppercase;
+		text-decoration:none;
+		display:block;
+		color:#000;
+		background:none;
+		margin:1px;
+		position:absolute;
+		top:12.8%;
+		left:2.0%;
+	}
+
+	#menu a:hover, #menu a:active,
+	#contact a:hover, #contact a:active{
+		background-color:rgba(0, 0, 0, 0.1);
 	}
 
 /* -------------------------------------------------- basic HTML */
@@ -112,28 +136,6 @@ background-color:blue;
 	#scroller #accueil{
 		width:100%;
 		padding:0;
-	}
-
-/* -------------------------------------------------- menu */
-
-	#menu, #contact{
-		font:normal 0.25em/1.5em Abel, sans-serif;
-		text-align:right;
-	}
-
-	#menu a:link,#menu a:visited,
-	#contact a:link,#contact a:visited{
-		text-transform:uppercase;
-		display:block;
-		text-decoration:none;
-		color:#000;
-		background:none;
-		margin:1px;
-	}
-
-	#menu a:hover, #menu a:active,
-	#contact a:hover, #contact a:active{
-		background-color:rgba(0, 0, 0, 0.1);
 	}
 
 /* -------------------------------------------------- zoom */
