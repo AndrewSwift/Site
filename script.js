@@ -1,13 +1,17 @@
 //------------------------------------------------------- config
 
-	aspect = 3/2;		// width and height of main page
-	ref_height = 1000;	// reference height of design
+	var aspect = 3/2;		// width and height of main page
+	var ref_height = 1000;	// reference height of design
 
 //------------------------------------------------------- global variables
 // need x offset, y offset and scale
 
-	win_w = $(window).width();
-	win_h = $(window).height();
+	var win_w = $(window).width();
+	var win_h = $(window).height();
+
+	var scale = 0;
+	var offset_x = 0;
+	var offset_y = 0;
 
 	if (win_w/win_h > aspect){ // screen is too wide
 		offset_y= 0;
@@ -22,39 +26,14 @@
 		offset_y = Math.round((win_h - (scale * ref_height)) / 2);
 	}
 
-throw new Error("offset_y="+offset_y);
-
-//------------------------------------------------------- old global variables
-
-
-	// to see if window changes size, we need to keep
-	// a record of its size at all times
-	realw = $(window).width();
-	realh = $(window).height();
-
-	// if the screen is too narrow, we use an artificial height
-	// and put black bars above and below
-
-	if (realw/realh>aspect){ // screen is too wide
-		workw = Math.round(realh*aspect);
-		workh = realh;
-		extrax = Math.round((realw-workw)/2);
-		extray = 0;
-	}
-	else{ // screen is too narrow
-		workw = realw;
-		workh = Math.round(workw/1.5);
-		extray = Math.round((realh-workh)/2);
-		extrax = 0;
-	}
-
-	conversion = workh/1000;
-
-
 //------------------------------------------------------- startup
 
-	cinema(realw,realh,workh);
+	// draw black bars top & bottom if page too narrow
+	cinema(offset_y,ref_height,scale);
+
 	dessiner(realw,workh);
+
+throw new Error('script.js');
 
 	fontsize = Math.round(100*conversion);
 	$('body').css('font','normal '+fontsize+'px/'+fontsize+'px Abel');

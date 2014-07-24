@@ -33,24 +33,6 @@
 		}
 	}
 
-	function cinema(realw,realh,workh){
-	// rajoute des barres noires dessus/dessous si la page est trop étroite
-	
-		if (realh != workh){
-			d = Math.round((realh-workh)/2);
-
-			topp = workh+d;
-
-			$('#haut').css('height',d+'px');
-			$('#masque-haut').css('height',d+'px');
-			$('#masque-bas').css('top',topp+'px');
-		}
-		else {
-			$('#haut').css('height','0px');
-			$('#masque-haut').css('height','0px');
-			$('#masque-bas').css('height','0px');
-		}
-	}
 
 	function desslogo(obj){
 
@@ -125,6 +107,25 @@
 		$('#zoomtxt').css('left',txtg);
 		$('#zoomtxt').css('top',txth);
 // if text is to right, reverse rotation
+	}
+
+//------------------------------------------------------- cinema
+// rajoute des barres noires dessus/dessous 
+// si la page est trop étroite
+
+	function cinema(offset_y,ref_height,scale){
+	
+		if (offset_y > 0){
+			$('#haut'       ).css('height',offset_y);
+			$('#masque-haut').css('height',offset_y);
+
+			$('#masque-bas' ).css('top',offset_y + ref_height * scale);
+		}
+		else {
+			$('#haut'       ).css('height',0);
+			$('#masque-haut').css('height',0);
+			$('#masque-bas' ).css('height',0);
+		}
 	}
 
 //------------------------------------------------------- fin
