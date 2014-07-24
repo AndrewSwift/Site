@@ -52,23 +52,6 @@
 		}
 	}
 
-	function cinema_old(realw,realh,workh){
-	// rajoute des barres noires dessus/dessous si la page est trop étroite
-	
-		if (realh != workh){
-			d = Math.round((realh-workh)/2);
-
-			$('#haut').css('height',d+'px');
-			$('#masque-haut').css('height',d+'px');
-			$('#masque-bas').css('height',d+'px');
-		}
-		else {
-			$('#haut').css('height','0px');
-			$('#masque-haut').css('height','0px');
-			$('#masque-bas').css('height','0px');
-		}
-	}
-
 	function desslogo(obj){
 
 			// logodim = ['#logo','width',350,'right',1500-380,'bottom',1000-490];
@@ -139,8 +122,14 @@
 //------------------------------------------------------- descend quand on clique sur l'image d'accueil
 
 	$(document).ready(function() {
+		// if you click on welcome image it scrolls a little
 		$("#accueil").click(function(event){
 		    $('html, body').animate({scrollTop:workh/5}, 300);
+		});
+
+		// if you click on logo it goes back to home page
+		$("#logo").click(function(event){
+			window.location = '/';
 		});
 	});
 
