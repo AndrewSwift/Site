@@ -78,42 +78,24 @@
 
 /* -------------------------------------------------- menu */
 
-	#menu{
-		font:normal 0.25em/1.5em Abel, serif;
+	#menu, #contact{
+		font:normal 0.25em/1.5em Abel, sans-serif;
 		text-align:right;
 	}
 
-	#menu a:link,#menu a:visited{
+	#menu a:link,#menu a:visited,
+	#contact a:link,#contact a:visited{
 		text-transform:uppercase;
 		display:block;
 		text-decoration:none;
 		color:#000;
-		padding:1px;
+		background:none;
+		margin:1px;
 	}
 
-	#menu a:hover{
-		padding:0px;
-		border:1px dotted #000;
-	}
-
-/* -------------------------------------------------- contact */
-
-	#contact{
-		text-align:right;
-		font:normal 0.25em/1em Abel, serif;
-		vertical-align:5vw;
-		white-space:nowrap;
-	}
-
-	#contact:link,#contact:visited{
-		color:#000;
-		text-decoration:none;
-		padding:1px;
-	}
-
-	#contact:hover,#contact:active{
-		padding:0px;
-		border:1px dotted #000;
+	#menu a:hover, #menu a:active,
+	#contact a:hover, #contact a:active{
+		background-color:rgba(0, 0, 0, 0.1);
 	}
 
 /* -------------------------------------------------- zoom */
