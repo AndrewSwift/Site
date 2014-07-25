@@ -30,8 +30,9 @@
 
 //------------------------------------------------------- fix font size
 // all other font sizes are a percentage of this one, NOT of their parent containers
+// god knows why but 200% works and 100% does not
 
-	$('body').css('font-size',scale*1.9+'em');
+	$('body').css('font-size',scale*200+'%');
 
 //------------------------------------------------------- startup
 
