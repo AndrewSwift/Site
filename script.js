@@ -53,7 +53,7 @@
 				'width:'	+ Math.round(ref_height * aspect * scale)	+'px;'+
 				'height:'	+ Math.round(ref_height * scale)			+'px;';
 
-	$('#placement').attr('style', stylestr);
+	$('#shadows').attr('style', stylestr);
 
 throw new Error('script.js: '+Math.round(ref_height * scale));
 
