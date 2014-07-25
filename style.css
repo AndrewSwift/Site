@@ -24,16 +24,10 @@
 		background-size: 100% 100%;
 	}
 
-/* -------------------------------------------------- fixed elements */
-
-	#shadows{
-		position:fixed;
-	}
-
 /* -------------------------------------------------- cinema masks */
 
 	#masque-haut,#masque-bas{
-		background-color:rgba(0, 0, 0, 1.0);
+		background-color:hsla(0,0%,0%,1.0);
 		position:fixed;
 		top:0px;
 		width:100%;
@@ -43,7 +37,11 @@
 		height:1000px;
 	}
 
-/* -------------------------------------------------- fixed elements */
+/* -------------------------------------------------- four background shadows */
+
+	#shadows{
+		position:fixed;
+	}
 
 	#ombreg,#ombred,#ombreh,#ombreb{
 		position:absolute;
@@ -74,16 +72,6 @@
 		top:77.6%
 	}
 
-/* -------------------------------------------------- logo */
-
-	#logo{
-		cursor:pointer;
-		position:absolute;
-		top:12.8%;
-		left:2.0%;
-		width:23.5%;
-	}
-
 /* -------------------------------------------------- basic HTML */
 
 	#contenu{
@@ -94,7 +82,7 @@
 
 	#scroller{
 		width:300;
-		background-color:#fff;
+		background-color:hsla(0,100%,100%,1.0);
 		position:relative;
 	}
 
@@ -102,7 +90,7 @@
 		cursor:pointer;
 		width:92%;
 		display:block;
-		background-color:#fff;
+		background-color:hsla(0,100%,100%,1.0);
 		padding:0% 4% 4% 4%;
 	}
 
@@ -126,12 +114,12 @@
 	}
 
 	#zoomimg{
-		background-color:#fff;
+		background-color:hsla(0,100%,100%,1.0);
 	}
 
 	#zoomtxt{
 		text-align:center;
-		color:#fff;
+		color:hsla(0,100%,100%,1.0);
 		font:normal 0.2em/0.6em helvetica, sans-serif;
 		background-image:url(images/opaque90.png);
 		background-repeat:no-repeat;
@@ -165,6 +153,28 @@
 		font:normal 1.1em/1.5em Helvetica,sans-serif;
 	}
 
+/* -------------------------------------------------- right-aligned block (logo, menu, contact) */
+
+	#rightalign{
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:300px;
+		height:300px;
+		background-color:hsla(120,100%,75%,0.3);
+		text-align:right;
+	}
+
+/* -------------------------------------------------- logo */
+
+	#logo{
+		cursor:pointer;
+		position:absolute;
+		top:12.8%;
+		left:2.0%;
+		width:23.5%;
+	}
+
 /* -------------------------------------------------- menu */
 
 	#menu{
@@ -180,12 +190,12 @@
 		text-decoration:none;
 		padding:0 0.2em;
 		display:block;
-		color:#000;
+		color:hsla(0,0%,0%,1.0);
 		background:none;
 	}
 
 	#menu a:hover, #menu a:active{
-		background-color:rgba(0, 0, 0, 0.1);
+		background-color:hsla(0,0%,0%,0.1);
 	}
 
 /* -------------------------------------------------- fin */

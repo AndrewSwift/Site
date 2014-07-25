@@ -47,7 +47,7 @@
 	// draw black bars top & bottom if page too narrow
 	cinema(offset_y, ref_height, scale);
 
-	// place main box with all non-scrolling content
+	// place background shadows
 	stylestr = 	'left:'		+ offset_x									+'px;'+
 				'top:'		+ offset_y									+'px;'+
 				'width:'	+ Math.round(ref_height * aspect * scale)	+'px;'+
