@@ -1,9 +1,9 @@
 //------------------------------------------------------- get initial values for scaling
 
-	var bg_width  = $('#noscroll').width();
-	var bg_height = $('#noscroll').height();
+	var orig_width  = $('#noscroll').width();
+	var orig_height = $('#noscroll').height();
 
-	var aspect = bg_width/bg_height;
+	var aspect = orig_width/orig_height;
 
 //------------------------------------------------------- calculate scaled size of content
 // need x offset, y offset and scale
@@ -19,33 +19,42 @@
 
 	if (win_w/win_h > aspect){ // screen is too wide
 		offset_y= 0;
-		scale = win_h / bg_height;
+		scale = win_h / orig_height;
 
-		offset_x = Math.round((win_w - (scale * aspect * bg_height)) / 2);
+		offset_x = Math.round((win_w - (scale * aspect * orig_height)) / 2);
 	}
 	else{ // screen is too narrow
 		offset_x = 0;
-		scale = win_w / (bg_height * aspect);
+		scale = win_w / (orig_height * aspect);
 
-		offset_y = Math.round((win_h - (scale * bg_height)) / 2);
+		offset_y = Math.round((win_h - (scale * orig_height)) / 2);
 	}
+
+//------------------------------------------------------- cinema bars
+// draw black bars top & bottom if page too narrow
+
+	cinema(offset_y, orig_height, scale);
 
 //------------------------------------------------------- background image
 
 	// fix background size
-	stylestr = 	'left:0'												+'px;'+
-				'top:'		+ offset_y									+'px;'+
-				'width:'	+ Math.round(bg_width * scale)				+'px;'+
-				'height:'	+ Math.round(bg_height * scale)				+'px;';
+	stylestr = 	'top:'		+ offset_y							+'px;'+
+				'height:'	+ Math.round(orig_height * scale)	+'px;';
+
+	$('#background').attr('style', stylestr);
+
+//------------------------------------------------------- content box
+
+	// fix content size
+	stylestr = 	'top:'		+ offset_y							+'px;'+
+				'left:'		+ offset_x							+'px;'+
+				'width:'	+ Math.round(orig_width * scale)	+'px;'+
+				'height:'	+ Math.round(orig_height * scale)	+'px;';
 
 	$('#noscroll').attr('style', stylestr);
+throw new Error(':'+stylestr);
 	
-//------------------------------------------------------- cinema bars
-// draw black bars top & bottom if page too narrow
-
-	cinema(offset_y, bg_height, scale);
-
-throw new Error('line 30');
+throw new Error(stylestr);
 
 //------------------------------------------------------- fix font size
 // all other font sizes are a percentage of this one, NOT of their parent containers
@@ -58,7 +67,7 @@ throw new Error('line 30');
 	stylestr = 	'left:'		+ offset_x									+'px;'+
 				'top:'		+ offset_y									+'px;'+
 				'width:'	+ Math.round(415 * scale)	+'px;'+
-				'height:'	+ Math.round(bg_height * scale)			+'px;';
+				'height:'	+ Math.round(orig_height * scale)			+'px;';
 
 	$('#rightalign').attr('style', stylestr);
 
@@ -67,7 +76,7 @@ throw new Error('line 30');
 //------------------------------------------------------- unfinished
 
 	// draw main scrolling content
-	content(offset_x + (content_x * scale), bg_height * scale);
+	content(offset_x + (content_x * scale), orig_height * scale);
 
 	fontsize = math.round(100*conversion);
 	$('body').css('font','normal '+fontsize+'px/'+fontsize+'px abel');
