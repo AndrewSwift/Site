@@ -1,9 +1,9 @@
 //------------------------------------------------------- get initial values for scaling
 
-	var bg_width  = $('#background').width();
-	var bg_height = $('#background').height();
+	var bg_width  = $('#noscroll').width();
+	var bg_height = $('#noscroll').height();
 
-	var aspect = bg_width/bg_height;		// width and height of main page
+	var aspect = bg_width/bg_height;
 
 //------------------------------------------------------- calculate scaled size of content
 // need x offset, y offset and scale
@@ -14,6 +14,8 @@
 	var scale = 0;
 	var offset_x = 0;
 	var offset_y = 0;
+
+//------------------------------------------------------- calculate offsets & scale of content
 
 	if (win_w/win_h > aspect){ // screen is too wide
 		offset_y= 0;
@@ -33,25 +35,15 @@
 	// fix background size
 	stylestr = 	'left:0'												+'px;'+
 				'top:'		+ offset_y									+'px;'+
-				'width:'	+ win_w										+'px;'+
-				'height:'	+ Math.round(bg_height * scale)			+'px;';
+				'width:'	+ Math.round(bg_width * scale)				+'px;'+
+				'height:'	+ Math.round(bg_height * scale)				+'px;';
 
-	$('#background').attr('style', stylestr);
+	$('#noscroll').attr('style', stylestr);
 	
 //------------------------------------------------------- cinema bars
 // draw black bars top & bottom if page too narrow
 
 	cinema(offset_y, bg_height, scale);
-
-//------------------------------------------------------- background shadows
-// place background shadows
-
-//	stylestr = 	'left:'		+ offset_x									+'px;'+
-//				'top:'		+ offset_y									+'px;'+
-//				'width:'	+ Math.round(bg_height * aspect * scale)	+'px;'+
-//				'height:'	+ Math.round(bg_height * scale)			+'px;';
-
-//	$('#shadows').attr('style', stylestr);
 
 throw new Error('line 30');
 
@@ -70,7 +62,7 @@ throw new Error('line 30');
 
 	$('#rightalign').attr('style', stylestr);
 
-	x = $('#background').height(); throw new Error('height'+x);
+	x = $('#noscroll').height(); throw new Error('height'+x);
 
 //------------------------------------------------------- unfinished
 

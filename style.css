@@ -18,9 +18,9 @@
 
 /* -------------------------------------------------- fixed elements */
 
-	#background{
+	#noscroll{
 		position:fixed;
-		background-image: url(images/background.jpg?t);
+		background-image: url(images/background.jpg);
 		background-size: 100% 100%;
 	}
 
@@ -41,41 +41,49 @@
 
 	#shadows{
 		position:absolute;
-		left:25%;
+		left:0%;
 		top:33%;
-		width:70%;
-		height:37%;
+		width:100%;
+		height:67%;
 	}
 
 	#ombreg,#ombred,#ombreh,#ombreb{
-		padding:0;
-		background-color:hsla(0,100%,50%,0.5);
 		position:absolute;
-	}
-
-	#ombreg, #ombred{
 	}
 
 	#ombreg{
 		height:100%;
 		left:0%;
-		padding-left:20%;
+		padding-left:22.7%;
 	}
 
 	#ombred{
 		height:100%;
 		right:0%;
-		padding-right:20%;
+		padding-right:3%;
 	}
 
 	#ombreh{
+		padding-top:5%;
 		width:100%;
 		top:0%;
 		}
 
 	#ombreb{
+		padding-bottom:5%;
 		width:100%;
 		bottom:0%;
+	}
+
+/* -------------------------------------------------- basic HTML */
+
+	#menublock{
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100px;
+		height:100px;
+		background-color:hsla(0,100%,50%,0.5);
 	}
 
 /* -------------------------------------------------- basic HTML */
