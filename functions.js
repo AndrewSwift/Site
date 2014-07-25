@@ -88,8 +88,7 @@
 	}
 
 //------------------------------------------------------- cinema
-// rajoute des barres noires dessus/dessous 
-// si la page est trop étroite
+// adds black bars top & bottom of page and adjusts background image
 
 	function cinema(offset_y,orig_height,scale){
 	
@@ -100,9 +99,9 @@
 			$('#masque-bas' ).css('top',offset_y + orig_height * scale);
 		}
 		else {
-			$('#haut'       ).css('height',0);
-			$('#masque-haut').css('height',0);
-			$('#masque-bas' ).css('height',0);
+			$('#haut'       ).css('visibility','hidden');
+			$('#masque-haut').css('visibility','hidden');
+			$('#masque-bas' ).css('visibility','hidden');
 		}
 
 		bgheight = Math.round(orig_height * scale);

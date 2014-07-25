@@ -9,11 +9,21 @@
 		border:0;
 	}
 
-	html{
-	}
-
 	body{
 		-webkit-text-size-adjust: none; /* http://css-tricks.com/prevent-iphone-text-enlargement/ */
+	}
+
+/* -------------------------------------------------- cinema masks */
+
+	#masque-haut,#masque-bas{
+		background-color:hsla(0,0%,0%,1.0);
+		position:fixed;
+		top:0px;
+		width:100%;
+	}
+
+	#masque-bas{
+		height:1000px;
 	}
 
 /* -------------------------------------------------- background image */
@@ -33,19 +43,6 @@
 		background-color:hsla(120,100%,50%,0.5);
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-/* -------------------------------------------------- cinema masks */
-
-	#masque-haut,#masque-bas{
-		background-color:hsla(0,0%,0%,1.0);
-		position:fixed;
-		top:0px;
-		width:100%;
-	}
-
-	#masque-bas{
-		height:1000px;
 	}
 
 /* -------------------------------------------------- four background shadows */
