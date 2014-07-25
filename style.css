@@ -16,12 +16,18 @@
 		-webkit-text-size-adjust: none; /* http://css-tricks.com/prevent-iphone-text-enlargement/ */
 	}
 
-/* -------------------------------------------------- fixed elements */
+/* -------------------------------------------------- background image */
 
-	#noscroll{
+	#background{
 		position:fixed;
 		background-image: url(images/background.jpg);
 		background-size: 100% 100%;
+	}
+
+/* -------------------------------------------------- fixed elements */
+
+	#noscroll{
+		position:absolute;
 	}
 
 /* -------------------------------------------------- cinema masks */
@@ -79,11 +85,13 @@
 
 	#menublock{
 		position:absolute;
-		top:0px;
-		left:0px;
-		width:100px;
-		height:100px;
+		top:50%;
+		left:10%;
+		width:30%;
+		height:50%;
 		background-color:hsla(0,100%,50%,0.5);
+
+		text-align:right;
 	}
 
 /* -------------------------------------------------- basic HTML */

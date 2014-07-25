@@ -13,22 +13,24 @@
 </head><body>
 
 	<div id=haut></div><!-- create initial black "cinema" bar above page -->
-	<div id=noscroll style="width:1500px;height:1000px;"><!-- contains all non-scrolling content -->
+	<div id=background style="width:100%;height:1000px;"><!-- contains the background image -->
+		<div id=noscroll style="width:1500px;height:1000px;"><!-- contains all non-scrolling content -->
 
-		<div id=shadows>
-			<img id=ombreg src=images/ombre-gauche.png>
-			<img id=ombred src=images/ombre-droite.png>
-			<img id=ombreh src=images/ombre-haute.png>
-			<img id=ombreb src=images/ombre-basse.png>
-		</div><!-- shadows -->
+			<div id=shadows>
+				<img id=ombreg src=images/ombre-gauche.png>
+				<img id=ombred src=images/ombre-droite.png>
+				<img id=ombreh src=images/ombre-haute.png>
+				<img id=ombreb src=images/ombre-basse.png>
+			</div><!-- shadows -->
 
-	 	<div id=menublock>
-			<img src=images/ozake_on.svg style="display:none">
-			<img title="Retour à la page d'accueil" id=logo src=images/ozake.svg
-			onmouseover="this.src='images/ozake_on.svg';"
-			onmouseout="this.src='images/ozake.svg';">
-		</div><!-- rightalign -->
+		 	<div id=menublock>
+				<img src=images/ozake_on.svg style="display:none">
+				<img title="Retour à la page d'accueil" id=logo src=images/ozake.svg
+				onmouseover="this.src='images/ozake_on.svg';"
+				onmouseout="this.src='images/ozake.svg';">
+			</div><!-- rightalign -->
 
+		</div>
 	</div>
 
 <!--		<div id=menu>
