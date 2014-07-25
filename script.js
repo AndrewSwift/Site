@@ -34,7 +34,7 @@
 
 	$('body').css('font-size',scale*200+'%');
 
-//------------------------------------------------------- startup
+//------------------------------------------------------- background image
 
 	// fix background size
 	stylestr = 	'left:0'												+'px;'+
@@ -44,16 +44,22 @@
 
 	$('#background').attr('style', stylestr);
 	
-	// draw black bars top & bottom if page too narrow
+//------------------------------------------------------- cinema bars
+// draw black bars top & bottom if page too narrow
+
 	cinema(offset_y, ref_height, scale);
 
-	// place background shadows
+//------------------------------------------------------- background shadows
+// place background shadows
+
 	stylestr = 	'left:'		+ offset_x									+'px;'+
 				'top:'		+ offset_y									+'px;'+
 				'width:'	+ Math.round(ref_height * aspect * scale)	+'px;'+
 				'height:'	+ Math.round(ref_height * scale)			+'px;';
 
 	$('#shadows').attr('style', stylestr);
+
+//------------------------------------------------------- menu unit
 
 throw new Error('script.js: '+Math.round(ref_height * scale));
 
