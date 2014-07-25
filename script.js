@@ -1,7 +1,8 @@
 //------------------------------------------------------- config
 
 	var aspect = 3/2;		// width and height of main page
-	var ref_height = 1000;	// reference height of design
+
+	var ref_height = $('#background').height();
 
 	var content_x = 410;	// left edge of main content box
 
@@ -61,7 +62,16 @@
 
 //------------------------------------------------------- menu unit
 
-throw new Error('script.js: '+Math.round(ref_height * scale));
+	stylestr = 	'left:'		+ offset_x									+'px;'+
+				'top:'		+ offset_y									+'px;'+
+				'width:'	+ Math.round(415 * scale)	+'px;'+
+				'height:'	+ Math.round(ref_height * scale)			+'px;';
+
+	$('#rightalign').attr('style', stylestr);
+
+	x = $('#background').height(); throw new Error('height'+x);
+
+//------------------------------------------------------- unfinished
 
 	// draw main scrolling content
 	content(offset_x + (content_x * scale), ref_height * scale);
