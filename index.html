@@ -14,6 +14,7 @@
 
 	<div id=haut></div><!-- create initial black "cinema" bar above page -->
 	<div id=background></div><!-- contains the background image -->
+
 	<div id=noscroll style="width:1500px;height:1000px;"><!-- contains all non-scrolling content -->
 
 		<div id=shadows>
@@ -23,28 +24,28 @@
 			<img id=ombreb src=images/ombre-basse.png>
 		</div>
 
-<!--		 	<div id=menublock>
-				<img src=images/ozake_on.svg style="display:none">
-				<img title="Retour à la page d'accueil" id=logo src=images/ozake.svg
+	 	<div id=menublock>
+			<img src=images/ozake_on.svg style="display:none">
+			<img title="Retour à la page d'accueil" id=logo src=images/ozake.svg
 				onmouseover="this.src='images/ozake_on.svg';"
 				onmouseout="this.src='images/ozake.svg';">
+
+			<div id=menu>
+				<a title="Pour faire une prairie" href=graphisme.html>graphisme</a>
+				<a title="il faut un trèfle et une abeille," href=developpement.html>dévéloppement</a>
+				<a title="Un trèfle et une abeille," href=traduction.html>traduction</a>
+				<a title="Et de la rêverie." href=clientele.html>clientèle</a>
+				<a title="La rêverie seule suffira," href=a_propos.html>à propos</a>
+				<a title="Si les abeilles sont rares." href=finance.html>finance</a>
 			</div>
--->
-	</div>
 
-<!--		<div id=menu>
-			<a title="Pour faire une prairie" href=graphisme.html>graphisme</a>
-			<a title="il faut un trèfle et une abeille," href=developpement.html>dévéloppement</a>
-			<a title="Un trèfle et une abeille," href=traduction.html>traduction</a>
-			<a title="Et de la rêverie." href=clientele.html>clientèle</a>
-			<a title="La rêverie seule suffira," href=a_propos.html>à propos</a>
-			<a title="Si les abeilles sont rares." href=finance.html>finance</a>
+			<div id=contact>
+				<a title="Nos coordonnées" href=contact.html>06 18 26 09 61 / EMAIL</a>
+			</div>
+
 		</div>
--->
-		<!-- <div id=contact>
-			<a title="Nos coordonnées" href=contact.html>06 18 26 09 61 / EMAIL</a>
-		</div> -->
 
+	</div><!-- noscroll -->
 	<div id=scroller style="display:none">
 		<img id=accueil src=images/accueil.jpg title="Descend un peu...">
 		<img src=images/labmi.svg onmousedown="msdown(this,70,150,200);">
@@ -60,7 +61,8 @@
 
 	<div id=masque-haut></div><!-- cover when scrolling -->
 	<div id=masque-bas></div><!-- cover when scrolling -->
-	<!--<div id=zoom onmousedown="msup(this);"><!-- show info about a portfolio item -->
+
+	<!--<div id=zoom onmousedown="msup(this);"><!-- show info about a portfolio item --
 		<img id=zoomimg>
 		<div id=zoomtxt></div>
 	</div>-->

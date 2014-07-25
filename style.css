@@ -40,7 +40,6 @@
 
 	#noscroll{
 		position:absolute;
-		background-color:hsla(120,100%,50%,0.5);
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -49,51 +48,90 @@
 
 	#shadows{
 		position:absolute;
-		left:0%;
-		top:33%;
-		width:100%;
-		height:67%;
+		left:0%;	top:33%;
+		width:100%;	height:67%;
 	}
 
 	#ombreg,#ombred,#ombreh,#ombreb{
 		position:absolute;
 	}
 
-	#ombreg{
-		height:100%;
-		left:0%;
-		padding-left:22.7%;
-	}
+	#ombreg{	padding-left:22.7%;	height:100%;	left:0%; }
 
-	#ombred{
-		height:100%;
-		right:0%;
-		padding-right:3%;
-	}
+	#ombred{	padding-right:3%;	height:100%;	right:0%; }
 
-	#ombreh{
-		padding-top:5%;
-		width:100%;
-		top:0%;
-		}
+	#ombreh{	padding-top:7%;		width:100%;		top:0%; }
 
-	#ombreb{
-		padding-bottom:5%;
-		width:100%;
-		bottom:0%;
-	}
+	#ombreb{	padding-bottom:7%;	width:100%;		bottom:0%; }
 
 /* -------------------------------------------------- basic HTML */
 
 	#menublock{
-		position:absolute;
-		top:50%;
-		left:10%;
-		width:30%;
-		height:50%;
-		background-color:hsla(0,100%,50%,0.5);
-
 		text-align:right;
+		position:absolute;
+		top:14.4%;
+		left:0%;
+		width:25%;
+		height:77%;
+		text-align:right;
+	}
+
+/* -------------------------------------------------- logo */
+
+	#logo{
+		cursor:pointer;
+		width:92%;
+		padding-bottom:1%;
+	}
+
+/* -------------------------------------------------- menu */
+
+	#menu{
+		font:normal 0.81em/1.90em Abel, sans-serif;
+		position:absolute;
+		top:46.5%;
+		right:0;
+		padding-top:6%;
+		padding-bottom:5%;
+	}
+
+	#menu a:link,#menu a:visited{
+		text-transform:uppercase;
+		text-decoration:none;
+		padding:0 0.2em;
+		display:block;
+		color:hsla(0,0%,0%,0.8);
+		background:none;
+	}
+
+	#menu a:hover, #menu a:active{
+		color:hsla(0,0%,0%,1.0);
+		background-color:hsla(0,0%,0%,0.1);
+	}
+
+/* -------------------------------------------------- contact */
+
+	#contact{
+		font:normal 0.81em/1.90em Abel, sans-serif;
+		position:absolute;
+		bottom:0;
+		right:0;
+		padding-top:6%;
+		padding-bottom:5%;
+	}
+
+	#contact a:link,#contact a:visited{
+		text-transform:uppercase;
+		text-decoration:none;
+		padding:0 0.2em;
+		display:block;
+		color:hsla(0,0%,0%,0.8);
+		background:none;
+	}
+
+	#contact a:hover, #contact a:active{
+		color:hsla(0,0%,0%,1.0);
+		background-color:hsla(0,0%,0%,0.1);
 	}
 
 /* -------------------------------------------------- basic HTML */
@@ -187,39 +225,6 @@
 		height:300px;
 		background-color:hsla(120,100%,75%,0.3);
 		text-align:right;
-	}
-
-/* -------------------------------------------------- logo */
-
-	#logo{
-		cursor:pointer;
-		position:absolute;
-		top:12.8%;
-		left:2.0%;
-		width:23.5%;
-	}
-
-/* -------------------------------------------------- menu */
-
-	#menu{
-		font:normal 0.72em/1.75em Abel, sans-serif;
-		text-align:right;
-		position:absolute;
-		top:51.9%;
-		left:14.8%;
-	}
-
-	#menu a:link,#menu a:visited{
-		text-transform:uppercase;
-		text-decoration:none;
-		padding:0 0.2em;
-		display:block;
-		color:hsla(0,0%,0%,1.0);
-		background:none;
-	}
-
-	#menu a:hover, #menu a:active{
-		background-color:hsla(0,0%,0%,0.1);
 	}
 
 /* -------------------------------------------------- fin */

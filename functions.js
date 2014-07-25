@@ -99,9 +99,9 @@
 			$('#masque-bas' ).css('top',offset_y + orig_height * scale);
 		}
 		else {
-			$('#haut'       ).css('visibility','hidden');
-			$('#masque-haut').css('visibility','hidden');
-			$('#masque-bas' ).css('visibility','hidden');
+			$('#haut'       ).css('display','none');
+			$('#masque-haut').css('display','none');
+			$('#masque-bas' ).css('display','none');
 		}
 
 		bgheight = Math.round(orig_height * scale);
