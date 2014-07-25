@@ -30,48 +30,36 @@
 		offset_y = Math.round((win_h - (scale * orig_height)) / 2);
 	}
 
-//------------------------------------------------------- cinema bars
-// draw black bars top & bottom if page too narrow
-
-	cinema(offset_y, orig_height, scale);
-
-//------------------------------------------------------- background image
-
-	// fix background size
-	stylestr = 	'top:'		+ offset_y							+'px;'+
-				'height:'	+ Math.round(orig_height * scale)	+'px;';
-
-	$('#background').attr('style', stylestr);
-
-//------------------------------------------------------- content box
-
-	// fix content size
-	stylestr = 	'top:'		+ offset_y							+'px;'+
-				'left:'		+ offset_x							+'px;'+
-				'width:'	+ Math.round(orig_width * scale)	+'px;'+
-				'height:'	+ Math.round(orig_height * scale)	+'px;';
-
-	$('#noscroll').attr('style', stylestr);
-throw new Error(':'+stylestr);
-	
-throw new Error(stylestr);
-
 //------------------------------------------------------- fix font size
 // all other font sizes are a percentage of this one, NOT of their parent containers
 // god knows why but 200% works and 100% does not
 
 	$('body').css('font-size',scale*200+'%');
 
-//------------------------------------------------------- menu unit
+//------------------------------------------------------- cinema bars
+// draw black bars top & bottom if page too narrow
 
-	stylestr = 	'left:'		+ offset_x									+'px;'+
-				'top:'		+ offset_y									+'px;'+
-				'width:'	+ Math.round(415 * scale)	+'px;'+
-				'height:'	+ Math.round(orig_height * scale)			+'px;';
+	cinema(offset_y, orig_height, scale);
 
-	$('#rightalign').attr('style', stylestr);
+//------------------------------------------------------- background image
+// fix background size
 
-	x = $('#noscroll').height(); throw new Error('height'+x);
+	stylestr = 	'top:'		+ offset_y							+'px;'+
+				'height:'	+ Math.round(orig_height * scale)	+'px;';
+
+	$('#background').attr('style', stylestr);
+
+//------------------------------------------------------- content box
+// fix content size
+
+	stylestr = 	'top:'		+ offset_y							+'px;'+
+				'left:'		+ offset_x							+'px;'+
+				'width:'	+ Math.round(orig_width * scale)	+'px;'+
+				'height:'	+ Math.round(orig_height * scale)	+'px;';
+
+	$('#noscroll').attr('style', stylestr);
+
+	throw new Error('end of js');
 
 //------------------------------------------------------- unfinished
 
