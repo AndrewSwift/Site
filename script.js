@@ -41,14 +41,6 @@
 
 	cinema(offset_y, orig_height, scale);
 
-//------------------------------------------------------- background image
-// fix background size
-
-	stylestr = 	'top:'		+ offset_y							+'px;'+
-				'height:'	+ Math.round(orig_height * scale)	+'px;';
-
-	$('#background').attr('style', stylestr);
-
 //------------------------------------------------------- content box
 // fix content size
 

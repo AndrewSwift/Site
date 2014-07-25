@@ -91,19 +91,25 @@
 // rajoute des barres noires dessus/dessous 
 // si la page est trop étroite
 
-	function cinema(offset_y,ref_height,scale){
+	function cinema(offset_y,orig_height,scale){
 	
 		if (offset_y > 0){
 			$('#haut'       ).css('height',offset_y);
 			$('#masque-haut').css('height',offset_y);
 
-			$('#masque-bas' ).css('top',offset_y + ref_height * scale);
+			$('#masque-bas' ).css('top',offset_y + orig_height * scale);
 		}
 		else {
 			$('#haut'       ).css('height',0);
 			$('#masque-haut').css('height',0);
 			$('#masque-bas' ).css('height',0);
 		}
+
+		bgheight = Math.round(orig_height * scale);
+		stylestr =  'top:'    + offset_y +'px;'+
+					'height:' + bgheight +'px;';
+
+		$('#background').attr('style', stylestr);
 	}
 
 //------------------------------------------------------- content
