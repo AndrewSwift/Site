@@ -1,74 +1,90 @@
+//------------------------------------------------------- clicks on logo & accueil
+
+	$(document).ready(function() {
+		// if you click on welcome image it scrolls a little
+		$('#accueil').click(function(event){
+		    $('html, body').animate({scrollTop:100}, 300);
+		});
+
+		// if you click on logo it goes back to home page
+		$('#logo').click(function(event){
+			window.location = '/';
+		});
+	});
+
 //------------------------------------------------------- get initial values for scaling
 
 	var orig_width  = $('#noscroll').width();
 	var orig_height = $('#noscroll').height();
 
+	var orig_scroll = $('#scroller').offset().left;
 	var aspect = orig_width/orig_height;
 
-//------------------------------------------------------- calculate scaled size of content
-// need x offset, y offset and scale
+//------------------------------------------------------- beginning named function
 
-	var win_w = $(window).width();
-	var win_h = $(window).height();
+	function redraw(){
 
-	var scale = 0;
-	var offset_x = 0;
-	var offset_y = 0;
+	//------------------------------------------------------- calculate scaled size of content
+	// need x offset, y offset and scale
 
-//------------------------------------------------------- calculate offsets & scale of content
+		var win_w = $(window).width();
+		var win_h = $(window).height();
 
-	if (win_w/win_h > aspect){ // screen is too wide
-		offset_y= 0;
-		scale = win_h / orig_height;
+		var scale = 0;
+		var offset_x = 0;
+		var offset_y = 0;
 
-		offset_x = Math.round((win_w - (scale * aspect * orig_height)) / 2);
-	}
-	else{ // screen is too narrow
-		offset_x = 0;
-		scale = win_w / (orig_height * aspect);
+	//------------------------------------------------------- calculate offsets & scale of content
 
-		offset_y = Math.round((win_h - (scale * orig_height)) / 2);
-	}
+		if (win_w/win_h > aspect){ // screen is too wide
+			offset_y= 0;
+			scale = win_h / orig_height;
 
-//------------------------------------------------------- fix font size
-// all other font sizes are a percentage of this one, NOT of their parent containers
-// god knows why but 200% works and 100% does not
+			offset_x = Math.round((win_w - (scale * aspect * orig_height)) / 2);
+		}
+		else{ // screen is too narrow
+			offset_x = 0;
+			scale = win_w / (orig_height * aspect);
 
-	$('body').css('font-size',scale*200+'%');
+			offset_y = Math.round((win_h - (scale * orig_height)) / 2);
+		}
 
-//------------------------------------------------------- cinema bars
-// draw black bars top & bottom if page too narrow
+	//------------------------------------------------------- fix font size
+	// all other font sizes are a percentage of this one, NOT of their parent containers
+	// god knows why but 200% works and 100% does not
 
-	cinema(offset_y, orig_height, scale);
+		$('body').css('font-size',scale*200+'%');
 
-//------------------------------------------------------- content box
-// fix content size
+	//------------------------------------------------------- cinema bars
+	// draw black bars top & bottom if page too narrow
 
-	stylestr = 	'top:'		+ offset_y							+'px;'+
-				'left:'		+ offset_x							+'px;'+
-				'width:'	+ Math.round(orig_width * scale)	+'px;'+
-				'height:'	+ Math.round(orig_height * scale)	+'px;';
+		cinema(offset_y, orig_height, scale);
 
-	$('#noscroll').attr('style', stylestr);
+	//------------------------------------------------------- fixed content
+	// adjust fixed content size
 
-//------------------------------------------------------- unfinished
+		stylestr = 	'top:'		+ offset_y							+'px;'+
+					'left:'		+ offset_x							+'px;'+
+					'width:'	+ Math.round(orig_width * scale)	+'px;'+
+					'height:'	+ Math.round(orig_height * scale)	+'px;';
 
-	// draw main scrolling content
-	content(offset_x + (offset_x * scale), orig_height * scale);
+		$('#noscroll').attr('style', stylestr);
 
-//------------------------------------------------------- clicks on logo & accueil
+	//------------------------------------------------------- scrolling content
+	// adjust scrolling content size
 
-	$(document).ready(function() {
-		// if you click on welcome image it scrolls a little
-		$("#accueil").click(function(event){
-		    $('html, body').animate({scrollTop:100}, 300);
-		});
+		stylestr =	'left:'		+ (Math.round(orig_scroll * scale) + offset_x)   +'px;'+
+					'width:'	+ Math.round(orig_height * scale)  				 +'px;';
 
-		// if you click on logo it goes back to home page
-		$("#logo").click(function(event){
-			window.location = '/';
-		});
-	});
+		$('#scroller').attr('style', stylestr);
+
+	//------------------------------------------------------- end named function
+
+}
+
+//------------------------------------------------------- interval to check if screen changed
+
+	setInterval(function(){redraw()},1000);
 
 //------------------------------------------------------- fin
 

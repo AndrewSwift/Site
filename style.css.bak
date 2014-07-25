@@ -137,10 +137,9 @@
 /* -------------------------------------------------- main square scrolling content */
 
 	#scroller{
-		width:1000px;
-		position:absolute;
-		left:405px;
+		width:300;
 		background-color:hsla(0,100%,100%,1.0);
+		position:relative;
 	}
 
 	#scroller img{
@@ -154,6 +153,72 @@
 	#scroller #accueil{
 		width:100%;
 		padding:0;
+	}
+
+/* -------------------------------------------------- zoom */
+
+	#zoom{
+		position:fixed;
+		top:0;
+		left:0;
+		width:0%;
+		height:100%;
+		background-image:url(images/degrade.png);
+		background-repeat:no-repeat;
+		background-size:100%;
+		text-align:center;
+	}
+
+	#zoomimg{
+		background-color:hsla(0,100%,100%,1.0);
+	}
+
+	#zoomtxt{
+		text-align:center;
+		color:hsla(0,100%,100%,1.0);
+		font:normal 0.2em/0.6em helvetica, sans-serif;
+		background-image:url(images/opaque90.png);
+		background-repeat:no-repeat;
+		background-size:100%;
+		width:27em;
+		height:8em;
+		position:fixed;
+		top:0px;
+		left:-10000px;
+		padding:0.2em;
+
+		white-space:wrap;
+
+		-ms-transform: rotate(353deg); /* IE 9 */
+		-webkit-transform: rotate(353deg); /* Chrome, Safari, Opera */
+		transform: rotate(353deg);
+
+		border:0.1em solid #666;
+		outline:0.2em solid #000;
+	}
+
+	#zoomtxt h1{
+		padding:0;
+		margin:0;
+		font:normal 1.9em/1.5em Abel,sans-serif;
+	}
+
+	#zoomtxt p{
+		padding:0;
+		margin:0;
+		font:normal 1.1em/1.5em Helvetica,sans-serif;
+	}
+
+/* -------------------------------------------------- right-aligned block (logo, menu, contact) */
+
+	#rightalign{
+		position:fixed;
+		top:0px;
+		left:0px;
+		width:300px;
+		height:300px;
+		background-color:hsla(120,100%,75%,0.3);
+		text-align:right;
 	}
 
 /* -------------------------------------------------- fin */
