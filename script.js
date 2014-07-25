@@ -29,11 +29,9 @@
 	}
 
 //------------------------------------------------------- fix font size
+// all other font sizes are a percentage of this one, NOT of their parent containers
 
-	//$('body').css('font-size',scale*2 + 'em');
 	$('body').css('font-size',scale*1.9+'em');
-// alert(scale*2 + 'em'); // 0.672em
-// alert(scale*1 + 'em'); // 0.336em
 
 //------------------------------------------------------- startup
 
