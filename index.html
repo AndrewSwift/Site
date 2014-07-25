@@ -13,22 +13,24 @@
 </head><body>
 
 	<div id=haut></div><!-- create initial black "cinema" bar above page -->
-	<div id=background style="height:1000px"></div><!-- because ios doesn't respect fixed html/body background -->
+	<div id=background style="width:1500px;height:1000px;"><!-- contains all non-scrolling content -->
 
-	<div id=shadows>
-		<img id=ombreg src=images/ombre-gauche.png>
-		<img id=ombred src=images/ombre-droite.png>
-		<img id=ombreh src=images/ombre-haute.png>
-		<img id=ombreb src=images/ombre-basse.png>
-	</div><!-- shadows -->
+		<div id=shadows>
+			<img id=ombreg src=images/ombre-gauche.png>
+			<img id=ombred src=images/ombre-droite.png>
+			<img id=ombreh src=images/ombre-haute.png>
+			<img id=ombreb src=images/ombre-basse.png>
+		</div><!-- shadows -->
 
-	<div id=rightalign>
-		<img src=images/ozake_on.svg style="display:none">
-		<img title="Retour à la page d'accueil" id=logo src=images/ozake.svg
-		onmouseover="this.src='images/ozake_on.svg';"
-		onmouseout="this.src='images/ozake.svg';">
+	</div>
+	<!-- 	<div id=menublock>
+			<img src=images/ozake_on.svg style="display:none">
+			<img title="Retour à la page d'accueil" id=logo src=images/ozake.svg
+			onmouseover="this.src='images/ozake_on.svg';"
+			onmouseout="this.src='images/ozake.svg';">
+			</div><!-- rightalign -->
 
-	</div><!-- rightalign -->
+
 <!--		<div id=menu>
 			<a title="Pour faire une prairie" href=graphisme.html>graphisme</a>
 			<a title="il faut un trèfle et une abeille," href=developpement.html>dévéloppement</a>

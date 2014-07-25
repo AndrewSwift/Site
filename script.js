@@ -1,12 +1,11 @@
-//------------------------------------------------------- config
+//------------------------------------------------------- get initial values for scaling
 
-	var aspect = 3/2;		// width and height of main page
+	var bg_width  = $('#background').width();
+	var bg_height = $('#background').height();
 
-	var ref_height = $('#background').height();
+	var aspect = bg_width/bg_height;		// width and height of main page
 
-	var content_x = 410;	// left edge of main content box
-
-//------------------------------------------------------- global variables
+//------------------------------------------------------- calculate scaled size of content
 // need x offset, y offset and scale
 
 	var win_w = $(window).width();
@@ -18,22 +17,16 @@
 
 	if (win_w/win_h > aspect){ // screen is too wide
 		offset_y= 0;
-		scale = win_h / ref_height;
+		scale = win_h / bg_height;
 
-		offset_x = Math.round((win_w - (scale * aspect * ref_height)) / 2);
+		offset_x = Math.round((win_w - (scale * aspect * bg_height)) / 2);
 	}
 	else{ // screen is too narrow
 		offset_x = 0;
-		scale = win_w / (ref_height * aspect);
+		scale = win_w / (bg_height * aspect);
 
-		offset_y = Math.round((win_h - (scale * ref_height)) / 2);
+		offset_y = Math.round((win_h - (scale * bg_height)) / 2);
 	}
-
-//------------------------------------------------------- fix font size
-// all other font sizes are a percentage of this one, NOT of their parent containers
-// god knows why but 200% works and 100% does not
-
-	$('body').css('font-size',scale*200+'%');
 
 //------------------------------------------------------- background image
 
@@ -41,31 +34,39 @@
 	stylestr = 	'left:0'												+'px;'+
 				'top:'		+ offset_y									+'px;'+
 				'width:'	+ win_w										+'px;'+
-				'height:'	+ Math.round(ref_height * scale)			+'px;';
+				'height:'	+ Math.round(bg_height * scale)			+'px;';
 
 	$('#background').attr('style', stylestr);
 	
 //------------------------------------------------------- cinema bars
 // draw black bars top & bottom if page too narrow
 
-	cinema(offset_y, ref_height, scale);
+	cinema(offset_y, bg_height, scale);
 
 //------------------------------------------------------- background shadows
 // place background shadows
 
-	stylestr = 	'left:'		+ offset_x									+'px;'+
-				'top:'		+ offset_y									+'px;'+
-				'width:'	+ Math.round(ref_height * aspect * scale)	+'px;'+
-				'height:'	+ Math.round(ref_height * scale)			+'px;';
+//	stylestr = 	'left:'		+ offset_x									+'px;'+
+//				'top:'		+ offset_y									+'px;'+
+//				'width:'	+ Math.round(bg_height * aspect * scale)	+'px;'+
+//				'height:'	+ Math.round(bg_height * scale)			+'px;';
 
-	$('#shadows').attr('style', stylestr);
+//	$('#shadows').attr('style', stylestr);
+
+throw new Error('line 30');
+
+//------------------------------------------------------- fix font size
+// all other font sizes are a percentage of this one, NOT of their parent containers
+// god knows why but 200% works and 100% does not
+
+	$('body').css('font-size',scale*200+'%');
 
 //------------------------------------------------------- menu unit
 
 	stylestr = 	'left:'		+ offset_x									+'px;'+
 				'top:'		+ offset_y									+'px;'+
 				'width:'	+ Math.round(415 * scale)	+'px;'+
-				'height:'	+ Math.round(ref_height * scale)			+'px;';
+				'height:'	+ Math.round(bg_height * scale)			+'px;';
 
 	$('#rightalign').attr('style', stylestr);
 
@@ -74,7 +75,7 @@
 //------------------------------------------------------- unfinished
 
 	// draw main scrolling content
-	content(offset_x + (content_x * scale), ref_height * scale);
+	content(offset_x + (content_x * scale), bg_height * scale);
 
 	fontsize = math.round(100*conversion);
 	$('body').css('font','normal '+fontsize+'px/'+fontsize+'px abel');
