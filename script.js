@@ -93,7 +93,8 @@
 			alert('line 6');
 		    $('html, body').animate({scrollTop:100}, 300);
 		});
-function msdown(obj){
-	alert('97');
+
+function svgevent(evt){
+	alert(evt.target.id)
 }
 

@@ -184,4 +184,5 @@
 			c-8.549-2.487-17.216-4.05-27.234-4.941H101.296z"/>
 	</g>
 </g>
+<rect id="epicenter" onclick="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="199.951" height="115.344"/>
 </svg>

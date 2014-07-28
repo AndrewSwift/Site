@@ -1879,5 +1879,5 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k=" transform="mat
 		</image>
 	</g>
 </g>
-<rect fill="none" width="1536" height="1440"/>
+<rect id="accueil" onclick="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="1536" height="1536"/>
 </svg>
