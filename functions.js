@@ -25,7 +25,7 @@
 //------------------------------------------------------- receives events from svg images
 
 	function svgevent(evt){
-		// alert(evt.target.id)
+		alert(evt.target.id)
 	}
 
 //------------------------------------------------------- fin
