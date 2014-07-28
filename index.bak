@@ -45,18 +45,17 @@
 	</div><!-- noscroll -->
 
 	<div id=scroller>
-<!-- <object data="test.jpg" type="image/jpeg"></object> -->
-		<object id=accueil data=images/accueil.svg title="Descend un peu..." type=image/svg+xml></object>
-		<object data=images/labmi.svg onmousedown="msdown(this,70,150,200);" type="image/svg+xml"></object>
-		<object data=images/tuna.svg onmousedown="msdown(this,3,150,200);" type="image/svg+xml"></object>
-		<object data=images/epicenter.svg onmousedown="msdown(this,30,150,200);" type="image/svg+xml"></object>
-		<object data=images/camille.svg onmousedown="msdown(this,10,150,200);" type="image/svg+xml"></object>
-		<object data=images/factotum.svg onmousedown="msdown(this,70,150,200);" type="image/svg+xml"></object>
-		<object data=images/love.svg onmousedown="msdown(this,3,150,200);" type="image/svg+xml"></object>
-		<object data=images/mynka.svg?x onmousedown="msdown(this,0,150,200);" type="image/svg+xml"></object>
-		<object data=images/annabelle.svg onmousedown="msdown(this,3,150,200);" type="image/svg+xml"></object>
-		<object data=images/lemon.svg onmousedown="msdown(this,70,150,200);" type="image/svg+xml"></object>
-	</div type=imagejpeg><object>
+		<img id=accueil src=images/accueil.jpg title="Descend un peu...">
+		<img src=images/labmi.svg onmousedown="msdown(this,70,150,200);">
+		<img src=images/tuna.svg onmousedown="msdown(this,3,150,200);">
+		<img src=images/epicenter.svg onmousedown="msdown(this,30,150,200);">
+		<img src=images/camille.svg onmousedown="msdown(this,10,150,200);">
+		<img src=images/factotum.svg onmousedown="msdown(this,70,150,200);">
+		<img src=images/love.svg onmousedown="msdown(this,3,150,200);">
+		<img src=images/mynka.svg onmousedown="msdown(this,0,150,200);">
+		<img src=images/annabelle.svg onmousedown="msdown(this,3,150,200);">
+		<img src=images/lemon.svg onmousedown="msdown(this,70,150,200);">
+	</div>
 
 	<div id=masque-haut></div><!-- cover extra when scrolling -->
 	<div id=masque-bas></div><!-- cover extra when scrolling -->
