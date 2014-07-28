@@ -4048,5 +4048,5 @@
 	c0,3.985,2.579,6.944,4.963,6.944c1.047,0,1.862-0.174,2.677-0.174c0.757,0,1.455,0.174,2.997,0.174
 	c1.743,0,3.661-1.509,3.661-3.859c0-0.931-0.755-2.124-1.714-2.328c-0.494,1.63-2.324,2.125-3.837,2.125
 	c-1.222,0-2.473-0.204-3.55-0.844c0.524-4.25,8.898-4.25,8.898-8.384c0-1.765-1.976-2.053-3.254-2.053H409.46z"/>
-<rect id="tuna" onclick="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="465.851" height="719.952"/>
+<rect id="tuna" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="465.851" height="719.952"/>
 </svg>

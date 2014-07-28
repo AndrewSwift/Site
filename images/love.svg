@@ -18861,5 +18861,5 @@
 		s-0.058-0.154-0.058-0.273c0-0.042,0.007-0.124,0.02-0.247c0.013-0.122,0.019-0.205,0.019-0.247c0-0.017-0.004-0.063-0.013-0.14
 		C592.963,348.543,592.958,348.492,592.958,348.467z"/>
 </g>
-<rect id="love" onclick="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="661.506" height="467.763"/>
+<rect id="love" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="661.506" height="467.763"/>
 </svg>

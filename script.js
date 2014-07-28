@@ -1,18 +1,3 @@
-//------------------------------------------------------- clicks on logo & accueil
-
-	$(document).ready(function() {
-		// if you click on welcome image it scrolls a little
-		$('#accueil').click(function(event){
-			alert('line 6');
-		    $('html, body').animate({scrollTop:100}, 300);
-		});
-
-		// if you click on logo it goes back to home page
-		$('#logo').click(function(event){
-			window.location = '/';
-		});
-	});
-
 //------------------------------------------------------- get initial values for scaling
 
 	var orig_width  = $('#noscroll').width();
@@ -83,18 +68,23 @@
 
 }
 
-//------------------------------------------------------- interval to check if screen changed
+//------------------------------------------------------- clicks on logo & accueil
 
-	setInterval(function(){redraw()},1000);
-
-//------------------------------------------------------- fin
-
+	$(document).ready(function() {
+		// if you click on welcome image it scrolls a little
 		$('#accueil').click(function(event){
 			alert('line 6');
 		    $('html, body').animate({scrollTop:100}, 300);
 		});
 
-function svgevent(evt){
-	alert(evt.target.id)
-}
+		// if you click on logo it goes back to home page
+		$('#logo').click(function(event){
+			window.location = '/';
+		});
+	});
 
+//------------------------------------------------------- interval to check if screen changed
+
+	setInterval(function(){redraw()},1000);
+
+//------------------------------------------------------- fin

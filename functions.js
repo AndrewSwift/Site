@@ -22,4 +22,10 @@
 		$('#background').attr('style', stylestr);
 	}
 
+//------------------------------------------------------- receives events from svg images
+
+	function svgevent(evt){
+		// alert(evt.target.id)
+	}
+
 //------------------------------------------------------- fin

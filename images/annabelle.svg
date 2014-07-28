@@ -637,5 +637,5 @@
 			c0,0,0.018-0.004,0.05-0.01C154.234,154.924,154.257,154.935,154.257,154.935z"/>
 	</g>
 </g>
-<rect id="annabelle" onclick="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="225.159" height="300"/>
+<rect id="annabelle" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="225.159" height="300"/>
 </svg>
