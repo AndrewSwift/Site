@@ -16,7 +16,7 @@
 /* -------------------------------------------------- cinema masks */
 
 	#masque-haut,#masque-bas{
-		background-color:hsla(0,0%,0%,1.0);
+		/* background-color:hsla(0,0%,0%,1.0); */
 		position:fixed;
 		top:0px;
 		width:100%;

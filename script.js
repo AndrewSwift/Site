@@ -3,6 +3,7 @@
 	$(document).ready(function() {
 		// if you click on welcome image it scrolls a little
 		$('#accueil').click(function(event){
+			alert('line 6');
 		    $('html, body').animate({scrollTop:100}, 300);
 		});
 
@@ -87,4 +88,12 @@
 	setInterval(function(){redraw()},1000);
 
 //------------------------------------------------------- fin
+
+		$('#accueil').click(function(event){
+			alert('line 6');
+		    $('html, body').animate({scrollTop:100}, 300);
+		});
+function msdown(obj){
+	alert('97');
+}
 
