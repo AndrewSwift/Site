@@ -1,10 +1,15 @@
 //------------------------------------------------------- get initial values for scaling
 
-	var stored_width  = $('#noscroll').width();
-	var stored_height = $('#noscroll').height();
+	var reference_width  = $('#noscroll').width();
+	var reference_height = $('#noscroll').height();
 
 	var orig_scroll = $('#scroller').offset().left;
-	var aspect = stored_width/stored_height;
+	var aspect = reference_width/reference_height;
+
+//------------------------------------------------------- beginning named function
+//
+	var stored_width = $(window).width();
+	var stored_height = $(window).height();
 
 //------------------------------------------------------- beginning named function
 
@@ -13,8 +18,8 @@
 	//------------------------------------------------------- calculate scaled size of content
 	// need x offset, y offset and scale
 
-		var win_w = $(window).width();
-		var win_h = $(window).height();
+		stored_width = $(window).width();
+		stored_height = $(window).height();
 
 		var scale = 0;
 		var offset_x = 0;
@@ -22,17 +27,17 @@
 
 	//------------------------------------------------------- calculate offsets & scale of content
 
-		if (win_w/win_h > aspect){ // screen is too wide
+		if (stored_width/stored_height > aspect){ // screen is too wide
 			offset_y= 0;
-			scale = win_h / stored_height;
+			scale = stored_height / reference_height;
 
-			offset_x = Math.round((win_w - (scale * aspect * stored_height)) / 2);
+			offset_x = Math.round((stored_width - (scale * aspect * reference_height)) / 2);
 		}
 		else{ // screen is too narrow
 			offset_x = 0;
-			scale = win_w / (stored_height * aspect);
+			scale = stored_width / (reference_height * aspect);
 
-			offset_y = Math.round((win_h - (scale * stored_height)) / 2);
+			offset_y = Math.round((stored_height - (scale * reference_height)) / 2);
 		}
 
 	//------------------------------------------------------- fix font size
@@ -44,15 +49,15 @@
 	//------------------------------------------------------- cinema bars
 	// draw black bars top & bottom if page too narrow
 
-		cinema(offset_y, stored_height, scale);
+		cinema(offset_y, reference_height, scale);
 
 	//------------------------------------------------------- fixed content
 	// adjust fixed content size
 
 		stylestr = 	'top:'		+ offset_y							+'px;'+
 					'left:'		+ offset_x							+'px;'+
-					'width:'	+ Math.round(stored_width * scale)	+'px;'+
-					'height:'	+ Math.round(stored_height * scale)	+'px;';
+					'width:'	+ Math.round(reference_width * scale)	+'px;'+
+					'height:'	+ Math.round(reference_height * scale)	+'px;';
 
 		$('#noscroll').attr('style', stylestr);
 
@@ -60,7 +65,7 @@
 	// adjust scrolling content size
 
 		stylestr =	'left:'		+ (Math.round(orig_scroll * scale) + offset_x)   +'px;'+
-					'width:'	+ Math.round(stored_height * scale)  				 +'px;';
+					'width:'	+ Math.round(reference_height * scale)  				 +'px;';
 
 		$('#scroller').attr('style', stylestr);
 
@@ -86,7 +91,7 @@
 
 		// interval to check if screen changed
 		setInterval(function(){
-			if(screenchanged($('#noscroll').width(),$('#noscroll').width()))
+			if(screenchanged($(window).width(),$(window).height()))
 				redraw();
 		},1000);
 
@@ -95,7 +100,7 @@
 //------------------------------------------------------- has screen size changed?
 
 	function screenchanged(w, h){
-		if (w != stored_width || h != stored_height) return true;
+		if (w != reference_width || h != reference_height) return true;
 		else return false;
 	}
 
