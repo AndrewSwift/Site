@@ -138,5 +138,5 @@
 	c0-3.879,0.117-6.137,1.528-7.924c0.565-0.706,1.293-0.987,2.21-0.987c1.763,0,1.693,0,3.48,0c5.432,0.023,1.646,0,4.044,0
 	c1.975,0,2.658,0.799,2.705,2.68c0.023,1.27-1.811,1.858-3.291-0.282c-0.589-0.847-0.847-1.176-2.822-1.152
 	C275.741,50.963,275.411,50.822,274.635,51.363z"/>
-<rect id="lemon" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="283.465" height="112.252"/>
+<rect id="lemon" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="283.465" height="112.252" />
 </svg>

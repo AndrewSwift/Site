@@ -1122,5 +1122,5 @@ S5QvkSJFihTpn6Jco+MnUqRIf4x8+D8BBgDIv5cwtztPUwAAAABJRU5ErkJggg==" transform="mat
 		C962.152,219.082,969.361,235.832,992.723,226.582z M962.026,205.422h14.175c7.459,0,8.83-0.249,8.83-3.759
 		c0-5.518-3.979-12.541-11.441-12.292C966.626,189.624,962.275,197.527,962.026,205.422z"/>
 </g>
-<rect id="forming" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="1463.371px" height="436.646px" />
+<rect id="forming" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="1463.371" height="436.646" />
 </svg>

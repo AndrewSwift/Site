@@ -580,5 +580,5 @@ hteO8D57SdP5kjLeK/6fAAMAMqyGiej3zoIAAAAASUVORK5CYII=" transform="matrix(0.5968 0
 		c9.977,6.202,20.493-1.079,31.548-0.539c5.825-0.999,8.056-5.386,10.749-9.486C288.757,120.156,288.097,119.982,287.445,119.791z"
 		/>
 </g>
-<rect id="brain" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="371.923px" height="245.844px" />
+<rect id="brain" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="371.923" height="245.844" />
 </svg>

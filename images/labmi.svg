@@ -130,5 +130,5 @@
 		C114.162,173.284,113.826,174.152,113.155,174.812z M126.152,158.785h-5.707v-2.802h5.324v-2.14h-5.324v-2.445h5.579v-2.14h-8.483
 		v11.667h8.61V158.785z"/>
 </g>
-<rect id="labmi" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="283.465" height="178.223"/>
+<rect id="labmi" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="283.465" height="178.223" />
 </svg>

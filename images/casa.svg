@@ -412,5 +412,5 @@ AO2StQ6l8OsGe7oLQKHN7w1VEtF28EjdENm6Z523eNZ5i/dpex91z7BpZsO1a3PPQ2XoQTAmJiYm
 		c1.453,1.997,2.641,1.613,2.641-0.861v-1.789c0-2.47,1.926-5.117,4.275-5.882l1.701-0.551
 		C125.724,238.66,125.724,237.41,123.374,236.648z"/>
 </g>
-<rect id="casa" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="481.89px" height="294.843px" />
+<rect id="casa" onmousedown="top.svgevent(evt)" pointer-events="visible" cursor="pointer" fill="none" width="481.89" height="294.843" />
 </svg>

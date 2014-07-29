@@ -12,6 +12,7 @@
 			$('#masque-bas' ).css('top',offset_y + orig_height * scale);
 		}
 		else {
+			$('#haut').css('height','0');
 			$('#haut, #masque-haut, #masque-bas').css('display','none');
 		}
 
