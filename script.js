@@ -71,12 +71,7 @@
 //------------------------------------------------------- clicks on logo & accueil
 
 	$(document).ready(function() {
-		// if you click on welcome image it scrolls a little
-		$('#accueil').click(function(event){
-			alert('line 6');
-		    $('html, body').animate({scrollTop:100}, 300);
-		});
-
+		//
 		// if you click on logo it goes back to home page
 		$('#logo').click(function(event){
 			window.location = '/';
