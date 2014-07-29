@@ -1,28 +1,3 @@
-//------------------------------------------------------- cinema
-// adds black bars top & bottom of page and adjusts background image
-
-	function cinema(offset_y,orig_height,scale){
-	
-		if (offset_y > 0){
-			$('#haut, #masque-haut, #masque-bas').css('display','block');
-
-			$('#haut'       ).css('height',offset_y);
-			$('#masque-haut').css('height',offset_y);
-
-			$('#masque-bas' ).css('top',offset_y + orig_height * scale);
-		}
-		else {
-			$('#haut').css('height','0');
-			$('#haut, #masque-haut, #masque-bas').css('display','none');
-		}
-
-		bgheight = Math.round(orig_height * scale);
-		stylestr =  'top:'    + offset_y +'px;'+
-					'height:' + bgheight +'px;';
-
-		$('#background').attr('style', stylestr);
-	}
-
 //------------------------------------------------------- receives events from svg images
 
 	function svgevent(evt){
@@ -40,8 +15,8 @@
 
 	function firstrun(){
 		redraw();
-		$('#masque-haut').css('background-color','hsla(0,0%,0%,1)');
-		$('#masque-bas' ).css('background-color','hsla(0,0%,0%,1)');
+		$('#masque-haut').css('background-color','hsla(0,100%,0%,1)');
+		$('#masque-bas' ).css('background-color','hsla(0,100%,0%,1)');
 	}
 
 //------------------------------------------------------- redraw screen when dimensions change
@@ -59,7 +34,7 @@
 		var offset_y = 0;
 
 	//------------------------------------------------------- calculate offsets & scale of content
-
+alert(stored_width/stored_height);
 		if (stored_width/stored_height > aspect){ // screen is too wide
 			offset_y= 0;
 			scale = stored_height / reference_height;
@@ -105,5 +80,29 @@
 	//------------------------------------------------------- end named function
 
 }
+
+//------------------------------------------------------- cinema
+// adds black bars top & bottom of page and adjusts background image
+
+	function cinema(offset_y,orig_height,scale){
+	
+		if (offset_y > 0){
+			$('#haut, #masque-haut, #masque-bas').css('display','block');
+
+			$('#haut'       ).css('height',offset_y);
+			$('#masque-haut').css('height',offset_y);
+
+			$('#masque-bas' ).css('top',offset_y + orig_height * scale);
+		}
+		else {
+			$('#haut, #masque-haut, #masque-bas').css('display','none');
+		}
+
+		bgheight = Math.round(orig_height * scale);
+		stylestr =  'top:'    + offset_y +'px;'+
+					'height:' + bgheight +'px;';
+
+		$('#background').attr('style', stylestr);
+	}
 
 //------------------------------------------------------- fin
