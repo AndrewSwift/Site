@@ -100,7 +100,7 @@
 //------------------------------------------------------- has screen size changed?
 
 	function screenchanged(w, h){
-		if (w != reference_width || h != reference_height) return true;
+		if (w != stored_width || h != stored_height) return true;
 		else return false;
 	}
 
