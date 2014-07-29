@@ -34,7 +34,7 @@
 		var offset_y = 0;
 
 	//------------------------------------------------------- calculate offsets & scale of content
-alert(stored_width/stored_height);
+
 		if (stored_width/stored_height > aspect){ // screen is too wide
 			offset_y= 0;
 			scale = stored_height / reference_height;
