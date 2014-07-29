@@ -4,6 +4,10 @@
 	function cinema(offset_y,orig_height,scale){
 	
 		if (offset_y > 0){
+			$('#haut'       ).css('display','block');
+			$('#masque-haut').css('display','block');
+			$('#masque-bas' ).css('display','block');
+
 			$('#haut'       ).css('height',offset_y);
 			$('#masque-haut').css('height',offset_y);
 
