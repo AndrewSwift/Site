@@ -68,18 +68,24 @@
 
 }
 
+//------------------------------------------------------- first run
+
+	function firstrun(){
+		$('#masque-haut').css('background-color','hsla(0,0%,0%,1)');
+		$('#masque-bas' ).css('background-color','hsla(0,0%,0%,1)');
+	}
+
 //------------------------------------------------------- clicks on logo & accueil
 
 	$(document).ready(function() {
-		//
+		firstrun();
+
 		// if you click on logo it goes back to home page
-		$('#logo').click(function(event){
-			window.location = '/';
-		});
+		$('#logo').click(function(event){ window.location = '/'; });
+
+		// interval to check if screen changed
+		setInterval(function(){redraw()},1000);
+
 	});
-
-//------------------------------------------------------- interval to check if screen changed
-
-	setInterval(function(){redraw()},1000);
 
 //------------------------------------------------------- fin
