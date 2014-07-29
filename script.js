@@ -1,10 +1,10 @@
 //------------------------------------------------------- get initial values for scaling
 
-	var orig_width  = $('#noscroll').width();
-	var orig_height = $('#noscroll').height();
+	var stored_width  = $('#noscroll').width();
+	var stored_height = $('#noscroll').height();
 
 	var orig_scroll = $('#scroller').offset().left;
-	var aspect = orig_width/orig_height;
+	var aspect = stored_width/stored_height;
 
 //------------------------------------------------------- beginning named function
 
@@ -24,15 +24,15 @@
 
 		if (win_w/win_h > aspect){ // screen is too wide
 			offset_y= 0;
-			scale = win_h / orig_height;
+			scale = win_h / stored_height;
 
-			offset_x = Math.round((win_w - (scale * aspect * orig_height)) / 2);
+			offset_x = Math.round((win_w - (scale * aspect * stored_height)) / 2);
 		}
 		else{ // screen is too narrow
 			offset_x = 0;
-			scale = win_w / (orig_height * aspect);
+			scale = win_w / (stored_height * aspect);
 
-			offset_y = Math.round((win_h - (scale * orig_height)) / 2);
+			offset_y = Math.round((win_h - (scale * stored_height)) / 2);
 		}
 
 	//------------------------------------------------------- fix font size
@@ -44,15 +44,15 @@
 	//------------------------------------------------------- cinema bars
 	// draw black bars top & bottom if page too narrow
 
-		cinema(offset_y, orig_height, scale);
+		cinema(offset_y, stored_height, scale);
 
 	//------------------------------------------------------- fixed content
 	// adjust fixed content size
 
 		stylestr = 	'top:'		+ offset_y							+'px;'+
 					'left:'		+ offset_x							+'px;'+
-					'width:'	+ Math.round(orig_width * scale)	+'px;'+
-					'height:'	+ Math.round(orig_height * scale)	+'px;';
+					'width:'	+ Math.round(stored_width * scale)	+'px;'+
+					'height:'	+ Math.round(stored_height * scale)	+'px;';
 
 		$('#noscroll').attr('style', stylestr);
 
@@ -60,7 +60,7 @@
 	// adjust scrolling content size
 
 		stylestr =	'left:'		+ (Math.round(orig_scroll * scale) + offset_x)   +'px;'+
-					'width:'	+ Math.round(orig_height * scale)  				 +'px;';
+					'width:'	+ Math.round(stored_height * scale)  				 +'px;';
 
 		$('#scroller').attr('style', stylestr);
 
@@ -71,6 +71,7 @@
 //------------------------------------------------------- first run
 
 	function firstrun(){
+		redraw();
 		$('#masque-haut').css('background-color','hsla(0,0%,0%,1)');
 		$('#masque-bas' ).css('background-color','hsla(0,0%,0%,1)');
 	}
@@ -84,8 +85,18 @@
 		$('#logo').click(function(event){ window.location = '/'; });
 
 		// interval to check if screen changed
-		setInterval(function(){redraw()},1000);
+		setInterval(function(){
+			if(screenchanged($('#noscroll').width(),$('#noscroll').width()))
+				redraw();
+		},1000);
 
 	});
+
+//------------------------------------------------------- has screen size changed?
+
+	function screenchanged(w, h){
+		if (w != stored_width || h != stored_height) return true;
+		else return false;
+	}
 
 //------------------------------------------------------- fin
