@@ -7,6 +7,8 @@
 		margin:0;
 		border-collapse:collapse;
 		border:0;
+		background-image: url(images/background_body.jpg);
+		background-size: 100% 100%;
 	}
 
 	body{

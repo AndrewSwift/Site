@@ -4,13 +4,6 @@
 		alert(evt.target.id)
 	}
 
-//------------------------------------------------------- has screen size changed?
-
-	function screenchanged(w, h){
-		if (w != stored_width || h != stored_height) return true;
-		else return false;
-	}
-
 //------------------------------------------------------- first run
 
 	function firstrun(){
@@ -27,7 +20,7 @@
 	// need x offset, y offset and scale
 
 		stored_width = $(window).width();
-		stored_height = $(window).height();
+		stored_height = $(window).innerHeight();
 
 		var scale = 0;
 		var offset_x = 0;
@@ -58,6 +51,13 @@
 	// draw black bars top & bottom if page too narrow
 
 		cinema(offset_y, reference_height, scale);
+
+	//------------------------------------------------------- fixed content
+	// fix for iPhone landscape background
+
+		if (stored_width==568 && stored_height==320) {
+			offset_y -=60;
+		}
 
 	//------------------------------------------------------- fixed content
 	// adjust fixed content size
@@ -103,6 +103,16 @@
 					'height:' + bgheight +'px;';
 
 		$('#background').attr('style', stylestr);
+	}
+
+//------------------------------------------------------- has screen size changed?
+
+	function screenchanged(w, h){
+		// $('#feedback').val('iH: '+window.innerHeight+', width: '+stored_width+', height: '+stored_height);
+		// $('#feedback').val($('#background').css('top'));
+		$('#feedback').val(stored_width+':'+stored_height);
+		if (w != stored_width || h != stored_height) return true;
+		else return false;
 	}
 
 //------------------------------------------------------- fin

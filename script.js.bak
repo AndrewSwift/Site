@@ -23,7 +23,7 @@
 		setInterval(function(){
 			if(screenchanged($(window).width(),$(window).height()))
 				redraw();
-		},300);
+		},1000);
 
 	});
 
