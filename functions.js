@@ -1,3 +1,8 @@
+// -------------------------------------------------- add verge to jQuery
+// http://verge.airve.com
+
+	jQuery.extend(verge);
+
 //------------------------------------------------------- receives events from svg images
 
 	function svgevent(evt){
@@ -19,8 +24,9 @@
 	//------------------------------------------------------- calculate scaled size of content
 	// need x offset, y offset and scale
 
-		stored_width = $(window).width();
-		stored_height = $(window).innerHeight();
+		stored_width = window.innerWidth;
+		stored_height = window.innerHeight;
+		$('#feedback').val(stored_width+'x'+stored_height);
 
 		var scale = 0;
 		var offset_x = 0;
@@ -55,7 +61,7 @@
 	//------------------------------------------------------- fixed content
 	// fix for iPhone landscape background
 
-		if (stored_width==568 && stored_height==320) {
+		if (iphonelandscape()) {
 			offset_y -=60;
 		}
 
@@ -108,9 +114,18 @@
 	function screenchanged(w, h){
 		// $('#feedback').val('iH: '+window.innerHeight+', width: '+stored_width+', height: '+stored_height);
 		// $('#feedback').val($('#background').css('top'));
-		$('#feedback').val(stored_width+':'+stored_height);
+		// $('#feedback').val(stored_width+':'+stored_height);
+//		s  = ' '+window.innerHeight;
+//		$('#feedback').val(s);
 		if (w != stored_width || h != stored_height) return true;
 		else return false;
+	}
+
+//------------------------------------------------------- test if client is iPhone
+
+	function iphonelandscape(){
+		if (stored_width==568 && stored_height==320) return true;
+		else return false; 
 	}
 
 //------------------------------------------------------- fin

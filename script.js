@@ -8,8 +8,8 @@
 
 //------------------------------------------------------- beginning named function
 //
-	var stored_width  = $(window).width();
-	var stored_height = $(window).innerHeight();
+	var stored_width  = window.innerWidth;
+	var stored_height = window.innerHeight;
 
 //------------------------------------------------------- clicks on logo & accueil
 
@@ -21,7 +21,7 @@
 
 		// interval to check if screen changed
 		setInterval(function(){
-			if(screenchanged($(window).width(),$(window).height()))
+			if(screenchanged(window.innerWidth,window.innerHeight))
 				redraw();
 		},300);
 
