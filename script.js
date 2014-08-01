@@ -25,6 +25,8 @@
 				redraw();
 		},300);
 
+	//			onmouseover="this.src='images/ozake_on.svg';"
+	//			onmouseout="this.src='images/ozake.svg';">
 	});
 
 //------------------------------------------------------- fin

@@ -1,8 +1,3 @@
-// -------------------------------------------------- add verge to jQuery
-// http://verge.airve.com
-
-	jQuery.extend(verge);
-
 //------------------------------------------------------- receives events from svg images
 
 	function svgevent(evt){
