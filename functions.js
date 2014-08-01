@@ -95,20 +95,12 @@
 			$('#masque-bas' ).css('top',offset_y + orig_height * scale);
 
 			// make sure you can scroll to end of images (fills behind masque-bas)
-			$('#last').css('padding-bottom',offset_y);
+			$('#last').css('padding-bottom',offset_y-1);
 		}
 		else {
 			$('#haut, #masque-haut, #masque-bas').css('display','none');
 		}
 
-//		$('body').css('margin-bottom',500);
-//		alert($('body').css('margin-bottom'));
-
-		bgheight = Math.round(orig_height * scale);
-		stylestr =  'top:'    + offset_y +'px;'+
-					'height:' + bgheight +'px;';
-
-		$('#background').attr('style', stylestr);
 	}
 
 //------------------------------------------------------- has screen size changed?
