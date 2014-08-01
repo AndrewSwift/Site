@@ -1,6 +1,7 @@
 <!doctype html><html><head>
 
     <script src="jquery-2.1.1.min.js"></script>
+    <script src="verge.min.js"></script>
     <script src="functions.js"></script>
     <meta charset="utf-8" />
 
@@ -45,6 +46,7 @@
 	</div><!-- noscroll -->
 
 	<div id=scroller>
+
 		<object data=images/accueil.svg		type="image/svg+xml" title="Descend un peu..." id=accueil></object>
 		<object data=images/salis.svg		type="image/svg+xml"></object>
 		<object data=images/shocking.svg	type="image/svg+xml"></object>
@@ -66,13 +68,15 @@
 		<object data=images/camille.svg		type="image/svg+xml"></object>
 		<object data=images/factotum.svg	type="image/svg+xml"></object>
 		<object data=images/love.svg 		type="image/svg+xml"></object>
-		<object data=images/mynka.svg?x 	type="image/svg+xml"></object>
+		<object data=images/mynka.svg	 	type="image/svg+xml"></object>
 		<object data=images/annabelle.svg 	type="image/svg+xml"></object>
 		<object data=images/lemon.svg 		type="image/svg+xml"></object>
+		<object data=images/zen.svg			type="image/svg+xml"></object>
 		<object data=images/tuna.svg		type="image/svg+xml"></object>
-		<object data=images/zen.svg			type="image/svg+xml" id="last"></object>
-	</div><!-- scroller -->
+		<img id=last src=images/spacer.gif width=1 height=1>
+	</div>
 
+	<div id=bas></div><!-- push up bottom of scrolling content when cinema bars are present -->
 	<div id=masque-haut></div><!-- cover extra when scrolling -->
 	<div id=masque-bas></div><!-- cover extra when scrolling -->
 
@@ -82,6 +86,6 @@
 	</div>-->
 
 	<script src="script.js"></script>
+	<input id=feedback type="TEXT" style="position:fixed;top:0px;left:20px;width:300px;border:none;background:none;font-weight:bold;display:none;" />
 
-<input id=feedback type="TEXT" style="display:none;position:absolute;top:0px;left:20px;width:500px" />
 </body></html>
