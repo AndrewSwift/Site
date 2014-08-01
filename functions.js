@@ -32,19 +32,36 @@
 		var offset_x = 0;
 		var offset_y = 0;
 
+		var used_width = stored_width;
+		var used_height = stored_height;
+
+	//------------------------------------------------------- fixed content
+	// fix for iPhone landscape background
+
+		if (iphonelandscape()) {
+			used_height += 60;
+		}
+
 	//------------------------------------------------------- calculate offsets & scale of content
 
-		if (stored_width/stored_height > aspect){ // screen is too wide
+		if (used_width/used_height > aspect){ // screen is too wide
 			offset_y= 0;
-			scale = stored_height / reference_height;
+			scale = used_height / reference_height;
 
-			offset_x = Math.round((stored_width - (scale * aspect * reference_height)) / 2);
+			offset_x = Math.round((used_width - (scale * aspect * reference_height)) / 2);
 		}
 		else{ // screen is too narrow
 			offset_x = 0;
-			scale = stored_width / (reference_height * aspect);
+			scale = used_width / (reference_height * aspect);
 
-			offset_y = Math.round((stored_height - (scale * reference_height)) / 2);
+			offset_y = Math.round((used_height - (scale * reference_height)) / 2);
+		}
+
+	//------------------------------------------------------- fixed content
+	// fix for iPhone landscape background
+
+		if (iphonelandscape()) {
+			offset_y -= 60;
 		}
 
 	//------------------------------------------------------- fix font size
@@ -57,13 +74,6 @@
 	// draw black bars top & bottom if page too narrow
 
 		cinema(offset_y, reference_height, scale);
-
-	//------------------------------------------------------- fixed content
-	// fix for iPhone landscape background
-
-		if (iphonelandscape()) {
-			offset_y -=60;
-		}
 
 	//------------------------------------------------------- fixed content
 	// adjust fixed content size
@@ -124,7 +134,7 @@
 //------------------------------------------------------- test if client is iPhone
 
 	function iphonelandscape(){
-		if (stored_width==568 && stored_height==320) return true;
+		if (stored_width==568 && stored_height==276) return true;
 		else return false; 
 	}
 
